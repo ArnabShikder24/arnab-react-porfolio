@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
+import Loader from 'react-loaders';
 import Logo from '../Logo/Logo';
 import './Home.scss'
 
@@ -16,6 +17,7 @@ const Home = () => {
     }, [])
 
     return (
+        <>
         <div className='container home-page'>
             <div className='text-zone'>
                 <h1>
@@ -34,6 +36,8 @@ const Home = () => {
             </div>
             <Logo></Logo>
         </div>
+        <Loader type='pacman'/>
+        </>
     );
 };
 
