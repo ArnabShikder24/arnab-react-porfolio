@@ -1,9 +1,9 @@
 import React from 'react';
 import './Logo.scss';
-import logoS from '../../assets/images/logo-s.png'
+import logoU from '../../assets/images/aboutme.jpg'
 import {useRef, useEffect} from 'react';
 import gsap from 'gsap';
-import DrawSVGPlugin from 'gsap/DrawSVGPlugin';
+import { DrawSVGPlugin } from 'gsap/all';
 
 const Logo = () => {
     const bgRef = useRef();
@@ -39,7 +39,7 @@ const Logo = () => {
 
     return (
         <div className='logo-container' ref={bgRef}>
-            <img ref={solidLogoRef} src={logoS} className='solid-logo' alt="S" />
+            <img ref={solidLogoRef} src={logoU} className='solid-logo' alt="S" />
             <svg
                 width="559pt"
                 height="897pt"
