@@ -82,3 +82,29 @@ h2 {
         color: #333;
     }
 }
+
+.logo-container {
+    z-index: 0;
+    width: 400px;
+    height: 609px;
+    position: absolute;
+    top: 0;
+    right: 15%;
+    bottom: 0;
+    left: auto;
+    margin: auto;
+    opacity: 1;
+
+    .solid-logo {
+        position: absolute;
+        top: 15%;
+        border-radius: 10%;
+        right: auto;
+        bottom: auto;
+        left: 0;
+        margin: auto;
+        width: 100%;
+        opacity: 1;
+        z-index: 1;
+    }
+}
