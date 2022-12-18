@@ -34,7 +34,7 @@ const Portfolio = () => {
         return (
             <div className='images-container'>
                 {
-                    portfolio.reverse().map((port, idx) => {
+                    portfolio.map((port, idx) => {
                         return (
                             <div className='image-box' key={idx}>
                                 <img className='portfolio-image' src={port.image} alt={port.title} />
