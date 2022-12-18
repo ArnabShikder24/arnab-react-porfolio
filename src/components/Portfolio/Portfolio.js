@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import Loader from 'react-loaders';
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
+import { collection, getDocs } from 'firebase/firestore/lite';
+import { db } from '../../firebase.init';
 import './Portfolio.scss';
-import portfolioData from '../../data/portfolio.json';
 
 const Portfolio = () => {
     const [letterClass, setLetterClass] = useState('text-animation');
+    const [portfolio, setPortfolio] = useState([]);
+    const [reverse, setReverse] = useState([]);
+
     useEffect(() => {
         const timer = setTimeout(() => {
             setLetterClass('text-animate-hover');
@@ -16,6 +20,21 @@ const Portfolio = () => {
         }
     }, [])
 
+    useEffect(() => {
+        getPortfolio();
+    }, [])
+
+    useEffect(() => {
+        setReverse(portfolio.reverse());
+    },[portfolio])
+
+
+    const getPortfolio = async () => {
+        const querySnapshort = await getDocs(collection(db, 'portfolio'));
+        setPortfolio(querySnapshort.docs.map(doc => doc.data()));
+    }
+
+
     const renderPortfolio = portfolio => {
         return (
             <div className='images-container'>
@@ -23,9 +42,9 @@ const Portfolio = () => {
                     portfolio.map((port, idx) => {
                         return (
                             <div className='image-box' key={idx}>
-                                <img className='portfolio-image' src={port.cover} alt={port.title} />
+                                <img className='portfolio-image' src={port.image} alt={port.title} />
                                 <div className='content'>
-                                    <p className='title'>{port.title}</p>
+                                    <p className='title'>{port.name}</p>
                                     <h4 className="description">{port.description}</h4>
                                     <button onClick={() => window.open(port.url)} className="btn">View</button>
                                 </div>
@@ -47,7 +66,7 @@ const Portfolio = () => {
                     ></AnimatedLetters>
                 </h1>
 
-                <div>{renderPortfolio(portfolioData?.portfolio)}</div>
+                <div>{renderPortfolio(reverse)}</div>
             </div>
             <Loader type='pacman'></Loader>
         </>
