@@ -26,7 +26,9 @@ const Portfolio = () => {
 
     const getPortfolio = async () => {
         const querySnapshort = await getDocs(collection(db, 'portfolio'));
-        setPortfolio(querySnapshort.docs.map(doc => doc.data()));
+        const data = querySnapshort.docs.map(doc => doc.data());
+        const reverseData = data.reverse();
+        setPortfolio(reverseData);
     }
 
 
