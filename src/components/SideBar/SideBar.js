@@ -13,32 +13,27 @@ const SideBar = () => {
                 <h1 className='logo-letter'>A</h1>
                 <h2 className='subtitle'>Arnab</h2>
             </Link>
-            {
-                showNav &&
-                (
-                <nav className={showNav ? 'mobile-show' : ''}>
-                    <NavLink exact='true' activeclassname='active' onClick={() => setShowNav(false)} to='/'>
-                        <FontAwesomeIcon icon={faHome} color='#4d4d4e'></FontAwesomeIcon>
-                    </NavLink>
-                    <NavLink activeclassname='active' onClick={() => setShowNav(false)} className='about-link' to='/about'>
-                        <FontAwesomeIcon icon={faUser} color='#4d4d4e'></FontAwesomeIcon>
-                    </NavLink>
-                    <NavLink activeclassname='active' onClick={() => setShowNav(false)} className='portfolio-link' to='/portfolio'>
-                        <FontAwesomeIcon icon={faSuitcase} color='#4d4d4e'></FontAwesomeIcon>
-                    </NavLink>
-                    <NavLink activeclassname='active' onClick={() => setShowNav(false)} className='contact-link' to='/contact'>
-                        <FontAwesomeIcon icon={faEnvelope} color='#4d4d4e'></FontAwesomeIcon>
-                    </NavLink>
-                    <FontAwesomeIcon
-                        onClick={() => setShowNav(false)}
-                        icon={faClose}
-                        color='#ffd700'
-                        size='3x'
-                        className='close-icon'
-                    />
-                </nav>
-                )
-            }
+            <nav className={showNav ? 'mobile-show' : ''}>
+                <NavLink exact='true' activeclassname='active' onClick={() => setShowNav(false)} to='/'>
+                    <FontAwesomeIcon icon={faHome} color='#4d4d4e'></FontAwesomeIcon>
+                </NavLink>
+                <NavLink activeclassname='active' onClick={() => setShowNav(false)} className='about-link' to='/about'>
+                    <FontAwesomeIcon icon={faUser} color='#4d4d4e'></FontAwesomeIcon>
+                </NavLink>
+                <NavLink activeclassname='active' onClick={() => setShowNav(false)} className='portfolio-link' to='/portfolio'>
+                    <FontAwesomeIcon icon={faSuitcase} color='#4d4d4e'></FontAwesomeIcon>
+                </NavLink>
+                <NavLink activeclassname='active' onClick={() => setShowNav(false)} className='contact-link' to='/contact'>
+                    <FontAwesomeIcon icon={faEnvelope} color='#4d4d4e'></FontAwesomeIcon>
+                </NavLink>
+                <FontAwesomeIcon
+                    onClick={() => setShowNav(false)}
+                    icon={faClose}
+                    color='#ffd700'
+                    size='3x'
+                    className='close-icon'
+                />
+            </nav>
             <ul>
                 <li>
                     <a target='_blank' rel='noreferrer' href='https://www.linkedin.com/in/arnab-shikder-7293a222a/'>

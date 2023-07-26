@@ -8,7 +8,7 @@ import './Home.scss'
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animation');
     const nameArray = ['r', 'n', 'a', 'b'];
-    const jobArray = ['w', 'e', 'b', ' ', 'd', 'e', 'v', 'e', 'l', 'p', 'e', 'r', '.'];
+    const jobArray = ['w', 'e', 'b', ' ', 'd', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', '.'];
 
     useEffect(() => {
         setTimeout(() => {
