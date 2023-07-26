@@ -36,7 +36,7 @@ const SideBar = () => {
             </nav>
             <ul>
                 <li>
-                    <a target='_blank' rel='noreferrer' href='https://www.linkedin.com/in/arnab-shikder-7293a222a/'>
+                    <a target='_blank' rel='noreferrer' href='https://www.linkedin.com/in/arnabshikder/'>
                         <FontAwesomeIcon icon={faLinkedin} color='#4d4d4e'></FontAwesomeIcon>
                     </a>
                 </li>
@@ -46,7 +46,7 @@ const SideBar = () => {
                     </a>
                 </li>
                 <li>
-                    <a target='_blank' rel='noreferrer' href='https://www.facebook.com/Arnab-Shikder-130243577581295'>
+                    <a target='_blank' rel='noreferrer' href='https://www.facebook.com/arnabshikder24'>
                         <FontAwesomeIcon icon={faFacebookSquare} color='#4d4d4e'></FontAwesomeIcon>
                     </a>
                 </li>

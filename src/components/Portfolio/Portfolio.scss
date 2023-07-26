@@ -115,6 +115,50 @@
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .container.portfolio-page {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+
+        h1.page-title {
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        .images-container {
+            gap: 71px;
+
+            .image-box {
+                height: 200px;
+                max-width: calc(50% - 10px);
+            }
+
+            .title {
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 0px;
+            }
+
+            .description {
+                font-size: 10px;
+                margin-bottom: 5px;
+                font-weight: 600;
+            }
+
+            .btn {
+                padding: 0 15px;
+                height: 40px;
+                font-size: 10px;
+                font-weight: 600;
+            }
+
+        }
+
+        
+    }
+}
+
 
 
 
