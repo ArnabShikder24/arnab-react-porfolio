@@ -147,6 +147,10 @@ $rotationAmt: -12;
         height: auto;
         min-height: auto;
 
+        .logo {
+            padding: 8px 0;
+        } 
+
         ul, nav {
             display: none;
         }
