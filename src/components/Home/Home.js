@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
 import Loader from 'react-loaders';
-import logoU from '../../assets/images/aboutme.jpg'
+import logoMe from '../../assets/images/aboutme2.jpg';
 import './Home.scss'
 
 const Home = () => {
@@ -35,7 +35,7 @@ const Home = () => {
                 <Link to='/contact' className='flat-button'>CONTACT ME</Link>
             </div>
             <div className='logo-container'>
-                <img src={logoU} className='solid-logo' alt="S" />
+                <img src={logoMe} className='solid-logo' alt="S" />
             </div>
         </div>
         <Loader type='pacman'/>
